@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  oracle19c:
+    image: oracledb19c/oracle.19.3.0-ee:oracle19.3.0-ee
+    container_name: oracle19c
+    environment:
+      - ORACLE_SID=ORCLCDB
+      - ORACLE_PDB=ORCLPDB1
+      - ORACLE_PWD=@Password123
+      - ORACLE_CHARACTERSET=AL32UTF8
+    ports:
+      - "1521:1521"
+      - "5500:5500"
+    volumes:
+      - oracle19c_data:/opt/oracle/oradata
+    restart: unless-stopped
+    mem_limit: 8g
+    shm_size: '1gb'
+
+volumes:
+  oracle19c_data:
+    driver: local
+
