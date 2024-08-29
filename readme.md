@@ -107,7 +107,7 @@ SELECT status, instance_name FROM v$instance;
 
 ALTER SYSTEM SET control_files='/opt/oracle/oradata/ORCLCDB/control01.ctl','/opt/oracle/oradata/ORCLCDB/control02.ctl' SCOPE=BOTH;
 
-
+```
 init.ora file should looks like 
 
 #
