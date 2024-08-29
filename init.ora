@@ -1,0 +1,14 @@
+# Oracle initialization parameters
+db_name='ORCLCDB'
+memory_target=1G
+processes=150
+audit_trail='db'
+db_block_size=8192
+db_domain=''
+diagnostic_dest='/opt/oracle'
+dispatchers='(PROTOCOL=TCP) (SERVICE=ORCLXDB)'
+open_cursors=300
+remote_login_passwordfile='EXCLUSIVE'
+undo_tablespace='UNDOTBS1'
+compatible='19.0.0'
+control_files='/opt/oracle/oradata/ORCLCDB/control01.ctl','/opt/oracle/oradata/ORCLCDB/control02.ctl'
