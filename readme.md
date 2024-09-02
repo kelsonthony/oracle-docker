@@ -179,3 +179,18 @@ compatible='19.0.0'
 # db_recovery_file_dest=2G
 # db_recovery_file_dest=2G
 control_files='/opt/oracle/oradata/ORCLCDB/control01.ctl','/opt/oracle/oradata/ORCLCDB/control02.ctl'
+
+
+``` open connnections 
+
+docker exec -it oracle19c bash
+
+sqlplus / as sysdba
+
+SELECT INSTANCE_NAME, STATUS, DATABASE_STATUS FROM V$INSTANCE;
+
+ALTER DATABASE OPEN;
+
+SELECT PDB_NAME, STATUS FROM DBA_PDBS;
+
+ALTER PLUGGABLE DATABASE BATCHDB OPEN;
